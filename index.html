@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediReply | 歯科・クリニックの口コミ返信を、医療広告ガイドラインに沿って</title>
+<meta name="description" content="歯科医院・クリニック専用の口コミ返信アシスタント。守秘義務や医療広告ガイドラインに引っかかりやすい表現を自動でチェックし、安全な返信文を下書きします。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="logo">MediReply</div><a class="btn" href="#tool">無料で試す</a></div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>その口コミ返信、<br>医療広告ガイドラインに違反していませんか?</h1>
+    <p>「ご来院ありがとうございます」「痛みが取れてよかったです」。善意の一文が、守秘義務や医療広告ガイドラインに触れることがあります。MediReplyは歯科医院・クリニック専用の口コミ返信アシスタントです。危ない表現をチェックし、安心して公開できる返信文を下書きします。</p>
+    <a class="btn" href="#tool">登録なしで返信をチェックする</a>
+  </div>
+
+  <section>
+    <h2>一般的なAI返信ツールとのちがい</h2>
+    <div class="grid">
+      <div class="card"><h3>守秘義務を守る</h3><p>来院の事実、治療名、症状に触れない返信だけを作ります。口コミに書かれていても繰り返しません。</p></div>
+      <div class="card"><h3>医療広告の表現を避ける</h3><p>効果の保証、比較・最上級の表現、費用や特典など、問題になりやすい言葉を自動で見つけます。</p></div>
+      <div class="card"><h3>公開前に必ず院で確認</h3><p>自動では投稿しません。下書きを院長やスタッフが確認してから公開する、安全な運用です。</p></div>
+      <div class="card"><h3>口コミの内容に合わせた返信</h3><p>待ち時間、費用、態度、痛み、電話など、口コミの内容から状況を読み取って、合った返信文を作ります。</p></div>
+      <div class="card"><h3>過去の返信もまとめて見直し</h3><p>これまでに公開した返信を貼り付けるだけで、問題になりそうなものを一度に洗い出せます。</p></div>
+    </div>
+    <p><a href="guide.html">口コミ返信で気をつける5つのポイント →</a><br>
+       <a href="examples-dental.html">歯科医院の口コミ返信例文11選(悪い例と良い例) →</a><br>
+       <a href="examples-clinic.html">クリニックの口コミ返信例文8選 →</a><br>
+       <a href="checklist.html">印刷して使える口コミ返信チェックリスト →</a></p>
+  </section>
+
+  <section id="tool">
+    <h2>無料で試す</h2>
+    <div class="card">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-pane="check">今の返信文をチェック</button>
+        <button class="tab" role="tab" aria-selected="false" data-pane="draft">返信文を作る</button>
+        <button class="tab" role="tab" aria-selected="false" data-pane="bulk">まとめてチェック</button>
+      </div>
+
+      <div id="pane-check">
+        <label for="checkText">返信文(公開済みのものや下書き)</label>
+        <textarea id="checkText" placeholder="例:ご来院いただきありがとうございます。インプラントの痛みが取れて本当によかったです。地域No.1の技術でこれからもサポートします。"></textarea>
+        <p><button class="btn" id="checkBtn">チェックする</button></p>
+      </div>
+
+      <div id="pane-draft" hidden>
+        <label for="review">患者さんの口コミ</label>
+        <textarea id="review" placeholder="口コミの文章を貼り付けてください"></textarea>
+        <div class="row">
+          <div><label for="stars">星の数</label>
+            <select id="stars"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></div>
+          <div><label for="clinic">署名(医院名)</label><input id="clinic" placeholder="例:さくら歯科クリニック 院長"></div>
+        </div>
+        <p><button class="btn" id="draftBtn">返信文を作る</button></p>
+      </div>
+
+      <div id="pane-bulk" hidden>
+        <label for="bulkText">これまでの返信文(複数)</label>
+        <textarea id="bulkText" style="min-height:220px" placeholder="返信文を、空行または「---」で区切って貼り付けてください。&#10;これまでに公開した返信を、まとめて見直せます。"></textarea>
+        <p><button class="btn" id="bulkBtn">まとめてチェックする</button></p>
+      </div>
+
+      <div class="result" id="result" aria-live="polite"></div>
+      <p class="note">チェックはお使いのブラウザの中だけで行い、入力内容はどこにも送信しません。患者さんの氏名など、個人がわかる情報は入力しないでください。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>料金</h2>
+    <div class="grid">
+      <div class="card price"><h3>フリー</h3><div class="yen">0円</div><ul><li>返信チェックは何回でも</li><li>AI返信の下書き 月5件</li></ul></div>
+      <div class="card price"><h3>ライト</h3><div class="yen">4,980円<small>/月</small></div><ul><li>AI返信の下書き 月50件</li><li>医院ごとの口調設定</li></ul></div>
+      <div class="card price"><h3>スタンダード</h3><div class="yen">9,800円<small>/月</small></div><ul><li>AI返信の下書き 無制限</li><li>新しい口コミの通知と下書きの自動作成</li><li>複数院の管理</li></ul></div>
+    </div>
+    <p class="note">価格は税別です。有料プランは準備中です。</p>
+  </section>
+
+  <section>
+    <h2>よくある質問</h2>
+    <details><summary>このチェックに通れば、法的に問題ありませんか?</summary><p>いいえ。MediReplyは問題になりやすい表現を機械的に見つける補助ツールで、法的な判断を保証するものではありません。判断に迷う場合は、所管の保健所や専門家にご相談ください。</p></details>
+    <details><summary>口コミに自動で返信されますか?</summary><p>されません。患者さんの良い口コミに自動でお礼を返すこと自体が、体験談の広告と受け取られるおそれがあるという指摘もあります。MediReplyは下書きを作るだけで、公開するかどうかは必ず医院が判断します。</p></details>
+    <details><summary>歯科以外のクリニックでも使えますか?</summary><p>使えます。内科、皮膚科、整形外科、美容クリニックなど、医療広告ガイドラインの対象となる医療機関に対応しています。</p></details>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p><a href="index.html">トップ</a> | <a href="guide.html">返信のポイント</a> | <a href="examples-dental.html">歯科の返信例</a> | <a href="examples-clinic.html">クリニックの返信例</a> | <a href="checklist.html">チェックリスト</a> | <a href="for-partners.html">提携をご検討の会社様へ</a> | <a href="terms.html">利用規約</a> | <a href="privacy.html">プライバシーポリシー</a></p>
+  <p>© MediReply — 本サービスは医療広告ガイドラインへの適合を保証するものではありません。</p>
+</div></footer>
+
+<script src="rules.js"></script>
+<script src="config.js"></script>
+<script>
+const $ =(id) => document.getElementById(id);
+const esc = (s) => s.replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
+  document.querySelectorAll(".tab").forEach((x) => x.setAttribute("aria-selected", x === t));
+  for (const p of ["check", "draft", "bulk"]) $("pane-" + p).hidden = t.dataset.pane !== p;
+  $("result").innerHTML = "";
+}));
+
+function highlight(text, findings) {
+  let out = "", pos = 0;
+  for (const f of findings) {
+    if (f.start < pos) continue;
+    out += esc(text.slice(pos, f.start));
+    out += `<mark class="${f.level === "NG" ? "ng" : "warn"}">${esc(text.slice(f.start, f.end))}</mark>`;
+    pos = f.end;
+  }
+  return out + esc(text.slice(pos));
+}
+
+function render(check, title) {
+  const status = check.ok
+    ? `<div class="status ok">問題になりやすい表現は見つかりませんでした${check.caution_count ? `(注意 ${check.caution_count}件)` : ""}</div>`
+    : `<div class="status ng">問題になる可能性がある表現が ${check.ng_count}件 見つかりました${check.caution_count ? `(ほかに注意 ${check.caution_count}件)` : ""}</div>`;
+  const list = check.findings.map((f) =>
+    `<div class="finding ${f.level === "NG" ? "" : "warn"}"><b>${esc(f.level)}|${esc(f.category)}:「${esc(f.match)}」</b><br>${esc(f.reason)}<br><small>言い換えのヒント:${esc(f.suggestion)}</small></div>`).join("");
+  $("result").innerHTML = (title ? `<h3>${title}</h3>` : "") + status + `<div class="reply">${highlight(check.text, check.findings)}</div>` + list;
+}
+
+// チェックはブラウザ内で行う(rules.js は rules.py から自動生成)。入力内容はどこにも送らない。
+const M = window.MEDIREPLY;
+const RULES = M.rules.map((r) => ({ ...r, rx: new RegExp(r.pattern, "gi") }));
+
+function check(text) {
+  const norm = (text || "").normalize("NFKC");
+  const findings = [];
+  for (const r of RULES) {
+    r.rx.lastIndex = 0;
+    let m;
+    while ((m = r.rx.exec(norm))) {
+      findings.push({ category: r.category, level: r.level, match: m[0], start: m.index, end: m.index + m[0].length, reason: r.reason, suggestion: r.suggestion });
+      if (!m[0]) r.rx.lastIndex++;
+    }
+  }
+  findings.sort((a, b) => a.start - b.start);
+  const ng = findings.filter((f) => f.level === M.NG).length;
+  return { text: norm, ok: ng === 0, ng_count: ng, caution_count: findings.length - ng, findings };
+}
+
+// drafter.choose_template と同じ選び方:口コミの内容と星の数で状況別のテンプレートを選ぶ
+function templateReply(review, stars, clinic) {
+  const text = (review || "").normalize("NFKC");
+  const s = M.situations.find((s) => stars >= s.stars[0] && stars <= s.stars[1] && new RegExp(s.keywords).test(text));
+  const key = stars >= 4 ? "high" : stars === 3 ? "mid" : "low";
+  const reply = (s ? s.reply : M.templates[key]).replace("{clinic_name}", clinic.trim() || "院長");
+  return { reply, label: s ? s.label : null };
+}
+
+// 署名はこのブラウザにだけ覚えておく(使えない環境では何もしない)
+const store = {
+  get(k) { try { return localStorage.getItem(k) || ""; } catch { return ""; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} },
+};
+$("clinic").value = store.get("medireply.clinic");
+$("clinic").addEventListener("change", () => store.set("medireply.clinic", $("clinic").value));
+
+// AIで作るサーバー(app.py + APIキー)があるときだけ送信する。静的公開では config.js が false なので何も送らない
+async function aiDraft(body) {
+  if (!window.MEDIREPLY_AI) return null;
+  try {
+    const res = await fetch("/api/draft", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+$("checkBtn").addEventListener("click", () => {
+  if (!$("checkText").value.trim()) {
+    $("result").innerHTML = `<div class="status ng">返信文を入力してください。</div>`;
+    return;
+  }
+  render(check($("checkText").value));
+});
+
+$("draftBtn").addEventListener("click", async (e) => {
+  e.target.disabled = true;
+  $("result").innerHTML = "<p>作成しています…</p>";
+  const stars = Number($("stars").value);
+  const d = await aiDraft({ review: $("review").value, stars, clinic_name: $("clinic").value });
+  if (d && d.source === "ai") render(d.check, "返信案(AI作成・チェック済み)");
+  else {
+    const t = templateReply($("review").value, stars, $("clinic").value);
+    render(check(t.reply), t.label ? `返信案(「${esc(t.label)}」についての口コミ向けテンプレート)` : "返信案(安全なテンプレート)");
+  }
+  e.target.disabled = false;
+});
+
+// まとめてチェック:空行または「---」で区切られた複数の返信文を一度に調べる
+$("bulkBtn").addEventListener("click", () => {
+  const items = $("bulkText").value.split(/\n\s*(?:---+)?\s*\n/).map((s) => s.trim()).filter(Boolean);
+  if (!items.length) {
+    $("result").innerHTML = `<div class="status ng">返信文を入力してください。</div>`;
+    return;
+  }
+  const results = items.map(check);
+  const bad = results.filter((r) => !r.ok).length;
+  const summary = bad
+    ? `<div class="status ng">${items.length}件中 ${bad}件に、問題になる可能性がある表現がありました</div>`
+    : `<div class="status ok">${items.length}件すべて、問題になりやすい表現は見つかりませんでした</div>`;
+  const rows = results.map((r, i) => `
+    <details ${r.ok ? "" : "open"}>
+      <summary>${i + 1}件目:${r.ok ? "問題なし" : `NG ${r.ng_count}件`}${r.caution_count ? `・注意 ${r.caution_count}件` : ""}</summary>
+      <div class="reply">${highlight(r.text, r.findings)}</div>
+      ${r.findings.map((f) => `<div class="finding ${f.level === "NG" ? "" : "warn"}"><b>${esc(f.level)}|${esc(f.category)}:「${esc(f.match)}」</b><br><small>${esc(f.suggestion)}</small></div>`).join("")}
+    </details>`).join("");
+  $("result").innerHTML = summary + rows;
+});
+</script>
+</body>
+</html>
